@@ -14,5 +14,15 @@ require('./sheep_core/config.php');
 </head>
 <body>
     
+    <!--- Topo do Site --->
+    <div class="header">
+        <p class="logo">Loja Cupcake</p>
+        <div class="cart">
+            <!--- Logo Carrinho de Compras Font Awesome --->
+            <p><i class="fa fa-shopping-cart"></i>0</p>
+        </div>
+    </div>
+    <!--- Fim do Topo Site --->
+
 </body>
 </html>
