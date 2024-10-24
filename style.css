@@ -40,3 +40,17 @@ body{
     align-items: center;
     padding: 7px 10px;
 }
+
+.cart.p{
+    width: 22px;
+    height: 22px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 22px;
+    background-color: #6c01aa;
+    color: #fff;
+}
+
+.fa-shopping-cart{
+    color: #6c01aa;
+}

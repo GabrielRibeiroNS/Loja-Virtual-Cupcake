@@ -17,12 +17,11 @@ require('./sheep_core/config.php');
     <!--- Topo do Site --->
     <div class="header">
         <p class="logo">Loja Cupcake</p>
-        <div class="cart">
-            <!--- Logo Carrinho de Compras Font Awesome --->
-            <p><i class="fa fa-shopping-cart"></i> 0 </p>
+        <!--- Logo Carrinho de Compras Font Awesome --->
+        <div class="cart"><i class="fa fa-shopping-cart"></i>
+            <p>0</p>
         </div>
     </div>
-
     <!--- Fim do Topo Site --->
 
 </body>
