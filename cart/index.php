@@ -30,7 +30,7 @@ require('./sheep_core/config.php');
     <div class="container">
         <!-- Linha Produto Site -->
         <div class="linha-produtos">
-        <!-- Inicio Produto -->
+            <!-- Inicio Produto -->
             <div class="corpoProduto">
                 <div class="imgProduto">
                     <img src="assets/img/produto-1.jpg" alt="" class="produtoMiniatura">
@@ -40,9 +40,9 @@ require('./sheep_core/config.php');
                     </div>
                 </div>
             </div>
-        <!-- Fim Produto -->
+            <!-- Fim Produto -->
         </div>
-        <!-- Fim Linha Produto Site -->
+        <!-- Fim Linha Produto Site --> 
     </div>
     <!-- Fim Conteudo do Site -->
 
