@@ -30,3 +30,13 @@ body{
     font-weight: bold;
     color: #fff;
 }
+
+.cart{
+    width: 80px;
+    display: flex; /*SSemi-Responsivo*/
+    background-color: #fff;
+    justify-content: space-between;
+    border-radius: 7px;
+    align-items: center;
+    padding: 7px 10px;
+}
