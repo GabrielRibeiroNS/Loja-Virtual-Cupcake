@@ -36,12 +36,12 @@ body{
     display: flex; /*SSemi-Responsivo*/
     background-color: #fff;
     justify-content: space-between;
-    border-radius: 7px;
+    border-radius: 3px;
     align-items: center;
     padding: 7px 10px;
 }
 
-.cart.p{
+.cart p{
     width: 22px;
     height: 22px;
     justify-content: center;
@@ -49,6 +49,8 @@ body{
     border-radius: 22px;
     background-color: #6c01aa;
     color: #fff;
+    padding-left: 6px;
+    padding-top: 1.5px;
 }
 
 .fa-shopping-cart{
