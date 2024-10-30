@@ -30,6 +30,7 @@ require('./sheep_core/config.php');
     <div class="container">
         <!-- Linha Produto Site -->
         <div class="linha-produtos">
+            <form action="filtros/criar.php" method="post">
             <!-- Inicio Produto -->
             <div class="corpoProduto">
 
@@ -40,9 +41,13 @@ require('./sheep_core/config.php');
                 <div class="titulo">
                     <p>Curso PHP</p>
                     <h2>R$ 10,00</h2>
+                    <input type="hidden" name="id_produto" value="">
+                    <input type="hidden" name="valor" value="">
+                    <button type="submit" class="button" name="addcarrinho"></button>
                 </div>
 
             </div>
+            </form>
         </div>
         <!-- Fim Produto -->
     </div>
