@@ -43,7 +43,7 @@ require('./sheep_core/config.php');
                     <h2>R$ 10,00</h2>
                     <input type="hidden" name="id_produto" value="">
                     <input type="hidden" name="valor" value="">
-                    <button type="submit" class="button" name="addcarrinho"></button>
+                    <button type="submit" class="button" name="addcarrinho">Adicionar ao Carrinho</button>
                 </div>
 
             </div>
