@@ -10,7 +10,7 @@ require('./sheep_core/config.php');
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>vendacupcake.com.br - Gabriel Ribeiro</title>
-    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../cart/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
@@ -32,20 +32,24 @@ require('./sheep_core/config.php');
         <div class="linha-produtos">
             <!-- Inicio Produto -->
             <div class="corpoProduto">
+
                 <div class="imgProduto">
                     <img src="assets/img/produto-1.jpg" alt="" class="produtoMiniatura">
-                    <div class="titulo">
-                        <p>Curso PHP</p>
-                        <h2>R$ 10,00</h2>
-                    </div>
                 </div>
-            </div>
-            <!-- Fim Produto -->
-        </div>
-        <!-- Fim Linha Produto Site --> 
-    </div>
-    <!-- Fim Conteudo do Site Nao editei hj -->
 
+                <div class="titulo">
+                    <p>Curso PHP</p>
+                    <h2>R$ 10,00</h2>
+                </div>
+
+            </div>
+        </div>
+        <!-- Fim Produto -->
+    </div>
+    <!-- Fim Linha Produto Site -->
+    <!-- Fim Conteudo do Site Nao editei hj -->
+    <!-- Xampp -->
+    <!-- https://localhost/Loja-Virtual-Cupcake/cart/ -->
 
 </body>
 
