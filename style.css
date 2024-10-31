@@ -133,3 +133,11 @@ h2 {
 .button:hover {
     background-color: #a751e4;
 }
+
+/*BARRA LATERAL*/
+
+.barraLateral{
+    width: 40%;
+}
+
+/*FIM BARRA LATERAL*/

@@ -171,6 +171,17 @@ require('./sheep_core/config.php');
         <!-- FIM PRODUTO CARRINHO -->
 
 
+        <!-- INICIO RODAPE -->
+        <div class="item-carrinho-vazio">Seu Carrinho está Vazio!</div>
+
+        
+        <div class="rodape">
+            <h3>Total</h3>
+            <h2>R$ 497</h2>
+        </div>
+        <!-- FIM RODAPE -->
+
+
 
 
     </div>
