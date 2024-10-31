@@ -150,39 +150,35 @@ require('./sheep_core/config.php');
 
         <!-- BARRA LATERAL -->
         <div class="barraLateral">
+
             <div class="topoCarrinho">
                 <p>Meu Carrinho</p>
             </div>
-        </div>
-        <!-- FIM BARRA LATERAL -->
+            <!-- FIM BARRA LATERAL -->
 
-        <!-- INICIO PRODUTO CARRINHO -->
-         <div class="item-carrinho">
-            <div class="linha-da-imagem">
-                <img src="assets/img/produto-1.jpg" alt="" class="img-carrinho">
+            <!-- INICIO PRODUTO CARRINHO -->
+            <div class="item-carrinho">
+                <div class="linha-da-imagem">
+                    <!--<img src="assets/img/produto-1.jpg" alt="" class="img-carrinho">-->
+                </div>
+                <p>Curso PHP</p>
+                <h2>497</h2>
+                <form action="filtros/excluir.php" method="post">
+                    <input type="hidden" name="id_produto" value="">
+                    <button type="submit" style="border:none; background:none;"> <i class="fa fa-trash-o"></i> </button>
+                </form>
             </div>
-            <p>Curso PHP</p>
-            <h2>497</h2>
-            <form action="filtros/excluir.php" method="post">
-                <input type="hidden" name="id_produto" value="">
-                <button type="submit" style="border:none; background:none;"> <i class="fa fa-trash-o"></i> </button>
-            </form>
-         </div>
-        <!-- FIM PRODUTO CARRINHO -->
+            <!-- FIM PRODUTO CARRINHO -->
 
+            <!-- INICIO RODAPE -->
+            <div class="item-carrinho-vazio">Seu Carrinho está Vazio!</div>
+            <div class="rodape">
+                <h3>Total</h3>
+                <h2>R$ 497</h2>
+            </div>
+            <!-- FIM RODAPE -->
 
-        <!-- INICIO RODAPE -->
-        <div class="item-carrinho-vazio">Seu Carrinho está Vazio!</div>
-
-        
-        <div class="rodape">
-            <h3>Total</h3>
-            <h2>R$ 497</h2>
         </div>
-        <!-- FIM RODAPE -->
-
-
-
 
     </div>
 
