@@ -168,3 +168,35 @@ h2 {
     margin: 10px 10px;
     border-bottom: 1px solid #aaa;
 }
+
+.linha-da-imagem{
+    /*border radius = BOLCA CARRINHO IMAGEM*/
+    display: flex;
+    width: 50px;
+    height: 50px;
+    border-radius: 20px;
+    border: 1px solid #6c01aa;
+    align-items: center;
+    justify-content: center;
+}
+
+.img-carrinho{
+    width: 90%;
+    height: 90%;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.rodape{
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+    padding: 10px 0;
+    border-top: 1px solid #333;
+}
+
+.fa-trash-o:hover{
+    cursor: pointer;
+    color: #333;
+}
