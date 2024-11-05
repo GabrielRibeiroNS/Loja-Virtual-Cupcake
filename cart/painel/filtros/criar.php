@@ -12,7 +12,9 @@ if(isset($produto['criarProduto'])){
     $salvar->CriarProduto($produto);
 
     if($salvar->getResultado()){
-        header("location: ".HOME."/painel/index.php?sucesso=true")
+        header("location: ".HOME."/painel/index.php?sucesso=true");    
+    }else{
+        header("location: ".HOME."/painel/index.php?sucesso=true"); 
     }
 
     //var_dump($produto); MOSTRA RECEBENDO OS ARQUIVOS E SUAS ESPECIFICAÇÔES
