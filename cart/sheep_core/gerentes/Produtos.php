@@ -19,6 +19,9 @@ class Produtos
                 $enviaFoto->Image($this->Data['capa'], date('Y-m-d-').time());
             }
             if(isset($enviaFoto) && $enviaFoto->getResult()){
+
+                $this->Data['capa'] = $this->Data['capa'] != null ? $enviaFoto->getResult() : null
+
                 $this->Banco();
                 $this->Criar();
             }
@@ -26,6 +29,25 @@ class Produtos
     }
 
     public function getResultado(array $data) {
+        return $this->Resultado;
+    }
+
+    private function Banco()
+    {
+        $capa = $this->Data['capa'];
+        unset($this->Data['capa']);
+
+        $this->Data = array_map('addslashes', $this->Data);
+        $this->Data = array_map('htmlspecialchars', $this->Data);
+        $this->Data = array_map('trim', $this->Data);
+        preg_replace('/[^[:alnum:]@]/', '', $this->Data);
+
+        $this->Data['capa'] = $capa;
+        $this->Data['nome']
+    }
+
+    private function Criar()
+    {
 
     }
 
