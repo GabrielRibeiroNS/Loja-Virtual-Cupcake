@@ -2,8 +2,35 @@
 
 class Produtos
 {
-
     private $Data;
+    private $Resultado;
+
+    const BD = 'produtos';
+
+    public function CriarProduto(array $data) 
+    {
+        $this->Data = $data;
+
+        if(in_array('', $this->Data)){
+            $this->Resultado = false
+        }else{
+            if(isset($this->Data['capa'])){
+                $enviaFoto = new Uploads('../../Uploads/');
+                $enviaFoto->Image($this->Data['capa'], date('Y-m-d-').time());
+            }
+            if(isset($enviaFoto) && $enviaFoto->getResult()){
+                $this->Banco();
+                $this->Criar();
+            }
+        }
+    }
+
+    public function getResultado(array $data) {
+
+    }
+
+
+    /*private $Data;
     private $Resultado;
 
     const BD = 'produtos';
@@ -69,7 +96,7 @@ class Produtos
             $this->Resultado = true;
         }
     }
-
+*/
 }
 
 ?>
