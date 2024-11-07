@@ -12,7 +12,7 @@ class Produtos
         $this->Data = $data;
 
         if(in_array('', $this->Data)){
-            $this->Resultado = false
+            $this->Resultado = false;
         }else{
             if(isset($this->Data['capa'])){
                 $enviaFoto = new Uploads('../../Uploads/');
@@ -20,7 +20,7 @@ class Produtos
             }
             if(isset($enviaFoto) && $enviaFoto->getResult()){
 
-                $this->Data['capa'] = $this->Data['capa'] != null ? $enviaFoto->getResult() : null
+                $this->Data['capa'] = $this->Data['capa'] != null ? $enviaFoto->getResult() : null;
 
                 $this->Banco();
                 $this->Criar();
