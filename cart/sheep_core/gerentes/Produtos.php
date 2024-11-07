@@ -32,6 +32,7 @@ class Produtos
         return $this->Resultado;
     }
 
+    //BANCO DE DADOS
     private function Banco()
     {
         $capa = $this->Data['capa'];
@@ -43,12 +44,20 @@ class Produtos
         preg_replace('/[^[:alnum:]@]/', '', $this->Data);
 
         $this->Data['capa'] = $capa;
-        $this->Data['nome']
+        $this->Data['nome'] = (string) $this->Data['nome'];
+        $this->Data['valor'] = (int) $this->Data['valor'];
+        $this->Data['data'] = date('Y-m-d H:i:s');
     }
 
     private function Criar()
     {
-
+        $criar = new Criar();
+        $criar->Criacao(self::BD, $this->Data);
+        if($criar->getResultado()){
+            $this->Resultado = true;
+        }else{
+            $this->Resultado = false;
+        }
     }
 
 
