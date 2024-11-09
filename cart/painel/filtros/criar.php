@@ -11,7 +11,7 @@ if(isset($produto['criarProduto'])){
     $salvar = new Produtos();
     $salvar->CriarProduto($produto);
 
-    if($salvar->getResultado()){
+    if($salvar->getResultado($data)){
         header("location: ".HOME."/painel/index.php?sucesso=true");    
     }else{
         header("location: ".HOME."/painel/index.php?erro=true"); 

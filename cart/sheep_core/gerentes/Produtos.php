@@ -28,7 +28,8 @@ class Produtos
         }
     }
 
-    public function getResultado(array $data) {
+    public function getResultado()
+    {
         return $this->Resultado;
     }
 
