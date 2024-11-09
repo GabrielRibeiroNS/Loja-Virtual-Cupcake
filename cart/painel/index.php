@@ -72,11 +72,11 @@ require('../sheep_core/config.php');
                             ?>
                           
                           <tr>
-                            <td>7</td>
-                            <td><img src="assets/img/sem-imagem.png" alt="" style="width:50px;"></td>
-                            <td><?= date('d/m/Y') ?></td>
-                            <td>Cursos Maykon</td>
-                            <td>R$ 77</td>
+                            <td><?=$produto->id?></td>
+                            <td><img src="<?=HOME?>/uploads/<?=$produto->capa?>" alt="" style="width:50px;"></td>
+                            <td><?= date('d/m/Y', strtotime($produto->data)) ?></td>
+                            <td><?=$produto->nome?></td>
+                            <td>R$ <?=$produto->valor?></td>
                                                    
                             <td><a href="" class="btn btn-icon btn-primary"><i class="far fa-edit"></i></a></td>
                             <td>
