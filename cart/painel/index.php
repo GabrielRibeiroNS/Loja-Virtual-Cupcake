@@ -67,8 +67,8 @@ require('../sheep_core/config.php');
                               if($ler->getResultado()){
                                 foreach($ler->getResultado() as $produto){
                                   $produto = (object) $produto;
-                                }
-                              } 
+                                
+                                
                             ?>
                           
                           <tr>
@@ -88,6 +88,8 @@ require('../sheep_core/config.php');
                             </td>
                           </tr>
                          <?php
+                            }
+                          }
                          ?>
 
                         </tbody>
@@ -98,7 +100,6 @@ require('../sheep_core/config.php');
               </div>
             </div>
           
-      <!-- fim TABELA  MAYKONSILVEIRA.COM.BR MAYKON SILVEIRA -->
       </section>
       </div>
         

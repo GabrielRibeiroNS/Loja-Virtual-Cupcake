@@ -10,7 +10,7 @@ require('./sheep_core/config.php');
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>vendacupcake.com.br - Gabriel Ribeiro</title>
-    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../cart/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
@@ -32,118 +32,44 @@ require('./sheep_core/config.php');
 
 
 
-
-
     <!-- Conteudo do Site -->
     <div class="container">
         <!-- Linha Produto Site -->
         <div class="linha-produtos">
+            <?php
+            $ler = new Ler();
+            $ler->Leitura('produtos', "ORDER BY data DESC");
+            if ($ler->getResultado()) {
+                foreach ($ler->getResultado() as $produto) {
+                    $produto = (object) $produto;
 
-            <!-- Inicio Produto -->
-            <form action="filtros/criar.php" method="post">
-                <div class="corpoProduto">
-                    <div class="imgProduto">
-                        <img src="assets/img/produto-1.jpg" alt="" class="produtoMiniatura">
-                    </div>
-                    <div class="titulo">
-                        <p>Curso PHP</p>
-                        <h2>R$ 10,00</h2>
-                        <input type="hidden" name="id_produto" value="">
-                        <input type="hidden" name="valor" value="">
-                        <button type="submit" class="button" name="addcarrinho">Adicionar ao Carrinho</button>
-                    </div>
-                </div>
-            </form>
-            <!-- Fim Produto -->
 
-            <!-- Inicio Produto -->
-            <form action="filtros/criar.php" method="post">
-                <div class="corpoProduto">
-                    <div class="imgProduto">
-                        <img src="assets/img/produto-2.jpg" alt="" class="produtoMiniatura">
-                    </div>
-                    <div class="titulo">
-                        <p>Curso PHP</p>
-                        <h2>R$ 10,00</h2>
-                        <input type="hidden" name="id_produto" value="">
-                        <input type="hidden" name="valor" value="">
-                        <button type="submit" class="button" name="addcarrinho">Adicionar ao Carrinho</button>
-                    </div>
-                </div>
-            </form>
-            <!-- Fim Produto -->
+            ?>
+                    <!-- Inicio Produto -->
+                    <form action="filtros/criar.php" method="post">
+                        <div class="corpoProduto">
+                            <div class="imgProduto">
+                                <img src="<?= HOME ?>/uploads/<?=$produto->capa ?>" alt="<?=$produto->nome?>" class="produtoMiniatura">
+                            </div>
+                            <div class="titulo">
+                                <p><?= $produto->nome ?></p>
+                                <h2>R$ <?= $produto->valor ?></h2>
+                                <input type="hidden" name="id_produto" value="">
+                                <input type="hidden" name="valor" value="">
+                                <button type="submit" class="button" name="addcarrinho">Adicionar ao Carrinho</button>
+                            </div>
+                        </div>
+                    </form>
+                    <!-- Fim Produto -->
 
-            <!-- Inicio Produto -->
-            <form action="filtros/criar.php" method="post">
-                <div class="corpoProduto">
-                    <div class="imgProduto">
-                        <img src="assets/img/produto-3.jpg" alt="" class="produtoMiniatura">
-                    </div>
-                    <div class="titulo">
-                        <p>Curso PHP</p>
-                        <h2>R$ 10,00</h2>
-                        <input type="hidden" name="id_produto" value="">
-                        <input type="hidden" name="valor" value="">
-                        <button type="submit" class="button" name="addcarrinho">Adicionar ao Carrinho</button>
-                    </div>
-                </div>
-            </form>
-            <!-- Fim Produto -->
 
-            <!-- Inicio Produto -->
-            <form action="filtros/criar.php" method="post">
-                <div class="corpoProduto">
-                    <div class="imgProduto">
-                        <img src="assets/img/produto-4.jpg" alt="" class="produtoMiniatura">
-                    </div>
-                    <div class="titulo">
-                        <p>Curso PHP</p>
-                        <h2>R$ 10,00</h2>
-                        <input type="hidden" name="id_produto" value="">
-                        <input type="hidden" name="valor" value="">
-                        <button type="submit" class="button" name="addcarrinho">Adicionar ao Carrinho</button>
-                    </div>
-                </div>
-            </form>
-            <!-- Fim Produto -->
+                    <!-- Fim Linha Produto Site -->
 
-            <!-- Inicio Produto -->
-            <form action="filtros/criar.php" method="post">
-                <div class="corpoProduto">
-                    <div class="imgProduto">
-                        <img src="assets/img/produto-4.jpg" alt="" class="produtoMiniatura">
-                    </div>
-                    <div class="titulo">
-                        <p>Curso PHP</p>
-                        <h2>R$ 10,00</h2>
-                        <input type="hidden" name="id_produto" value="">
-                        <input type="hidden" name="valor" value="">
-                        <button type="submit" class="button" name="addcarrinho">Adicionar ao Carrinho</button>
-                    </div>
-                </div>
-            </form>
-            <!-- Fim Produto -->
-
-            <!-- Inicio Produto -->
-            <form action="filtros/criar.php" method="post">
-                <div class="corpoProduto">
-                    <div class="imgProduto">
-                        <img src="assets/img/produto-4.jpg" alt="" class="produtoMiniatura">
-                    </div>
-                    <div class="titulo">
-                        <p>Curso PHP</p>
-                        <h2>R$ 10,00</h2>
-                        <input type="hidden" name="id_produto" value="">
-                        <input type="hidden" name="valor" value="">
-                        <button type="submit" class="button" name="addcarrinho">Adicionar ao Carrinho</button>
-                    </div>
-                </div>
-            </form>
-            <!-- Fim Produto -->
+            <?php
+                }
+            }
+            ?>
         </div>
-        <!-- Fim Linha Produto Site -->
-
-
 
 
 
@@ -172,7 +98,7 @@ require('./sheep_core/config.php');
 
             <!-- INICIO RODAPE -->
             <div class="item-carrinho-vazio">Seu Carrinho está Vazio!</div>
-            
+
             <div class="rodape">
                 <h3>Total</h3>
                 <h2>R$ 497</h2>
@@ -183,6 +109,7 @@ require('./sheep_core/config.php');
 
     </div>
 
+</body>
 
 
 
@@ -224,10 +151,9 @@ require('./sheep_core/config.php');
 
 
 
-
-    <!-- Fim Conteudo do Site Nao editei hj -->
-    <!-- Xampp -->
-    <!-- https://localhost/Loja-Virtual-Cupcake/cart/ -->
+<!-- Fim Conteudo do Site Nao editei hj -->
+<!-- Xampp -->
+<!-- https://localhost/Loja-Virtual-Cupcake/cart/ -->
 
 </body>
 

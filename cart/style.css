@@ -63,14 +63,15 @@ body {
 /*FIM HEADER*/
 
 .container {
-    border: 1px solid rgb(0, 0, 0);
     display: flex;
     width:70%;
     margin-bottom: 30px;
+    /*border: 1px solid #6c01aa;*/
 }
 
 .linha-produtos {
     /**Queremos apresenta-lo em GRID em bloquinhos*/
+    /*border: 1px solid #000000;*/
     display: grid;
     width: 70%;
     grid-template-columns: repeat(2, 1fr);
@@ -89,7 +90,7 @@ body {
 
 .imgProduto {
     width: 100%;
-    height: 170px;
+    height: 190px;
     display: flex;
     justify-content: center;
     align-items: center;
