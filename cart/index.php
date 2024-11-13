@@ -85,38 +85,60 @@ require('./sheep_core/config.php');
             </div>
             <!-- FIM BARRA LATERAL -->
 
-            <!-- INICIO PRODUTO CARRINHO -->
+
 
             <?php
             if ($cart->getContaLinhas() > 0) {
                 foreach ($cart->getResultado() as $carts) {
+
+
+                    $ler = new Ler();
+                    $ler->Leitura('produtos', "WHERE id = :id ORDER BY data DESC", "id={$carts['id_produto']}");
+                    if ($ler->getResultado()) {
+                        foreach ($ler->getResultado() as $produto) {
+                            $produto = (object) $produto;
+
             ?>
+                            <!-- INICIO PRODUTO CARRINHO -->
+                            <div class="item-carrinho">
+                                <div class="linha-da-imagem">
+                                    <img src="<?= HOME ?>/uploads/<?= $produto->capa?>" alt="<?= $produto->nome?>" class="img-carrinho">
+                                </div>
+                                <p><?= $produto->nome?></p>
+                                <h2>R$ <?= $produto->valor?></h2>
+                                <form action="filtros/excluir.php" method="post">
+                                    <input type="hidden" name="id_produto" value="<?= $produto->id?>">
+                                    <button type="submit" style="border:none; background:none; "> <i class="fa fa-trash-o"></i> </button>
+                                </form>
+                            </div>
+                            <!-- FIM PRODUTO CARRINHO -->
 
-                    <div class="item-carrinho">
-                        <div class="linha-da-imagem">
-                            <img src="assets/img/produto-1.jpg" alt="" class="img-carrinho">
-                        </div>
-                        <p>Curso PHP</p>
-                        <h2>497</h2>
-                        <form action="filtros/excluir.php" method="post">
-                            <input type="hidden" name="id_produto" value="">
-                            <button type="submit" style="border:none; background:none; "> <i class="fa fa-trash-o"></i> </button>
-                        </form>
-                    </div>
-                    <!-- FIM PRODUTO CARRINHO -->
+                            <!-- INICIO RODAPE -->
 
-                    <!-- INICIO RODAPE -->
-
-            <?php
+                <?php
+                        }
+                    }
                 }
             } else {
+                ?>
+                <div class="item-carrinho-vazio">Seu Carrinho está Vazio!</div>
+            <?php
+            }
             ?>
 
-            <div class="item-carrinho-vazio">Seu Carrinho está Vazio!</div>
+            <?php
+            $totalCarrinho = new Ler();
+            $totalCarrinho->LeituraCompleta("SELECT SUM(valor) as total FROM carrinho");
+            if($totalCarrinho->getResultado()){
+                $totalCompras = number_format($totalCarrinho->getResultado()[0]['total'], 2,',','.');
+            }else{
+                $totalCompras = 0;
+            }
+            ?>
 
             <div class="rodape">
                 <h3>Total</h3>
-                <h2>R$ 497</h2>
+                <h2>R$ <?=$totalCompras?></h2>
             </div>
             <!-- FIM RODAPE -->
 
