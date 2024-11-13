@@ -54,8 +54,8 @@ require('./sheep_core/config.php');
                             <div class="titulo">
                                 <p><?= $produto->nome ?></p>
                                 <h2>R$ <?= $produto->valor ?></h2>
-                                <input type="hidden" name="id_produto" value="">
-                                <input type="hidden" name="valor" value="">
+                                <input type="hidden" name="id_produto" value="<?=$produto->id?>">
+                                <input type="hidden" name="valor" value="<?=$produto->valor?>">
                                 <button type="submit" class="button" name="addcarrinho">Adicionar ao Carrinho</button>
                             </div>
                         </div>
