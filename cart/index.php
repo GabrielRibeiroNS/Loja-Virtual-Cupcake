@@ -107,7 +107,7 @@ require('./sheep_core/config.php');
                                 <p><?= $produto->nome?></p>
                                 <h2>R$ <?= $produto->valor?></h2>
                                 <form action="filtros/excluir.php" method="post">
-                                    <input type="hidden" name="id_produto" value="<?= $produto->id?>">
+                                    <input type="hidden" name="id_produto" value="<?=$produto->id?>">
                                     <button type="submit" style="border:none; background:none; "> <i class="fa fa-trash-o"></i> </button>
                                 </form>
                             </div>
