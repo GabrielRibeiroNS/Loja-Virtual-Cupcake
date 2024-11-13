@@ -16,7 +16,10 @@ require('./sheep_core/config.php');
 
 <body>
 
-
+    <?php
+    $cart = new ler();
+    $cart->Leitura('carrinho');
+    ?>
 
 
     <!--- Topo do Site --->
@@ -24,7 +27,7 @@ require('./sheep_core/config.php');
         <p class="logo">Loja Cupcake</p>
         <!--- Logo Carrinho de Compras Font Awesome --->
         <div class="cart"><i class="fa fa-shopping-cart"></i>
-            <p>0</p>
+            <p><?= $cart->getContaLinhas() > 0 ? $cart->getContaLinhas() : 0 ?></p>
         </div>
     </div>
     <!--- Fim do Topo Site --->
@@ -49,13 +52,13 @@ require('./sheep_core/config.php');
                     <form action="filtros/criar.php" method="post">
                         <div class="corpoProduto">
                             <div class="imgProduto">
-                                <img src="<?= HOME ?>/uploads/<?=$produto->capa ?>" alt="<?=$produto->nome?>" class="produtoMiniatura">
+                                <img src="<?= HOME ?>/uploads/<?= $produto->capa ?>" alt="<?= $produto->nome ?>" class="produtoMiniatura">
                             </div>
                             <div class="titulo">
                                 <p><?= $produto->nome ?></p>
                                 <h2>R$ <?= $produto->valor ?></h2>
-                                <input type="hidden" name="id_produto" value="<?=$produto->id?>">
-                                <input type="hidden" name="valor" value="<?=$produto->valor?>">
+                                <input type="hidden" name="id_produto" value="<?= $produto->id ?>">
+                                <input type="hidden" name="valor" value="<?= $produto->valor ?>">
                                 <button type="submit" class="button" name="addcarrinho">Adicionar ao Carrinho</button>
                             </div>
                         </div>
@@ -83,20 +86,32 @@ require('./sheep_core/config.php');
             <!-- FIM BARRA LATERAL -->
 
             <!-- INICIO PRODUTO CARRINHO -->
-            <div class="item-carrinho">
-                <div class="linha-da-imagem">
-                    <img src="assets/img/produto-1.jpg" alt="" class="img-carrinho">
-                </div>
-                <p>Curso PHP</p>
-                <h2>497</h2>
-                <form action="filtros/excluir.php" method="post">
-                    <input type="hidden" name="id_produto" value="">
-                    <button type="submit" style="border:none; background:none; "> <i class="fa fa-trash-o"></i> </button>
-                </form>
-            </div>
-            <!-- FIM PRODUTO CARRINHO -->
 
-            <!-- INICIO RODAPE -->
+            <?php
+            if ($cart->getContaLinhas() > 0) {
+                foreach ($cart->getResultado() as $carts) {
+            ?>
+
+                    <div class="item-carrinho">
+                        <div class="linha-da-imagem">
+                            <img src="assets/img/produto-1.jpg" alt="" class="img-carrinho">
+                        </div>
+                        <p>Curso PHP</p>
+                        <h2>497</h2>
+                        <form action="filtros/excluir.php" method="post">
+                            <input type="hidden" name="id_produto" value="">
+                            <button type="submit" style="border:none; background:none; "> <i class="fa fa-trash-o"></i> </button>
+                        </form>
+                    </div>
+                    <!-- FIM PRODUTO CARRINHO -->
+
+                    <!-- INICIO RODAPE -->
+
+            <?php
+                }
+            } else {
+            ?>
+
             <div class="item-carrinho-vazio">Seu Carrinho está Vazio!</div>
 
             <div class="rodape">
@@ -110,51 +125,7 @@ require('./sheep_core/config.php');
     </div>
 
 </body>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- Fim Conteudo do Site Nao editei hj -->
 <!-- Xampp -->
 <!-- https://localhost/Loja-Virtual-Cupcake/cart/ -->
-
-</body>
 
 </html>

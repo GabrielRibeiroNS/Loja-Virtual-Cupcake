@@ -13,7 +13,7 @@ require('../sheep_core/config.php');
         <link rel="stylesheet" href="assets/css/app.min.css">
       
         <link rel="stylesheet" href="assets/css/style.css">
-        <!-- FIM DO CSS  SHEEP FRAMEWORK PHP - MAYKONSILVEIRA.COM.BR -->
+        <!-- FIM DO CSS  SHEEP FRAMEWORK PHP - -->
 </head>
 <body>
 
@@ -24,7 +24,7 @@ require('../sheep_core/config.php');
         <div class="col-md-10"> 
       <section class="section" >
 
-
+            
             <!-- inicio topo menu -->
             <?php
             

@@ -33,6 +33,18 @@ class Carrinho
         $this->Data['data'] = date('Y-m-d H:i:s');
     }
 
+    private function Criar()
+    {
+        $criar = new Criar();
+        $criar->Criacao(self::BD, $this->Data);
+        if($criar->getResultado()){
+            $this->Resultado = true;
+        }else{
+            $this->Resultado = false;
+        }
+    }
+
+
 }
 
 ?>
