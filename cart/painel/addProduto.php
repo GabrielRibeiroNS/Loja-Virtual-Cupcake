@@ -24,17 +24,6 @@ require('../sheep_core/config.php');
         <div class="col-md-10"> 
       <section class="section" >
 
-
-            <!-- inicio topo menu -->
-            <?php
-            
-            require_once('topo.php');
-
-            ?>
-      
-            <!-- fim topo menu -->
-
-
            <br>
          <!-- inicio formulario  topo menu -->
           <form action="filtros/criar.php" method="post" enctype="multipart/form-data">

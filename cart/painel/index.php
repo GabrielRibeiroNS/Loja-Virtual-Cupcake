@@ -26,11 +26,32 @@ require('../sheep_core/config.php');
 
             
             <!-- inicio topo menu -->
-            <?php
-            
-            require_once('topo.php');
-
-            ?>
+            <div class="row">
+              <div class="col-md-12">
+                <div class="card mb-0">
+                  <div class="card-body">
+                      <ul class="nav nav-pills" style="margin:5px; float:right;">
+                      <li class="nav-item" >
+                        <a class="nav-link active"  href="addProduto.php">Novo </a>
+                      </li>
+                     
+                    </ul>
+                    <ul class="nav nav-pills">
+                    
+                      <li class="nav-item">
+                        <a class="nav-link active" href="<?=HOME?>/index.php" target="_blank">VOLTAR PARA A LOJA</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="index.php">Listar</a>
+                      </li>
+                     
+                      
+                     
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
       
             <!-- fim topo menu -->
 
@@ -55,7 +76,6 @@ require('../sheep_core/config.php');
                             <th>Nome</th>
                             <th>Valor</th>
                            
-                            <th>Editar</th>
                             <th>Excluir</th>
                            
                           </tr>
@@ -63,7 +83,7 @@ require('../sheep_core/config.php');
                         <tbody>
                             <?php
                               $ler = new Ler();
-                              $ler->Leitura('produtos', "ORDER BY data DESC");
+                              $ler->Leitura('produtos', "ORDER BY data ASC");
                               if($ler->getResultado()){
                                 foreach($ler->getResultado() as $produto){
                                   $produto = (object) $produto;
@@ -78,11 +98,9 @@ require('../sheep_core/config.php');
                             <td><?=$produto->nome?></td>
                             <td>R$ <?=$produto->valor?></td>
                                                    
-                            <td><a href="" class="btn btn-icon btn-primary"><i class="far fa-edit"></i></a></td>
                             <td>
-                                <form action="" method="post">
-                                 <input type="hidden" name="shepp-firewall" value="">
-                                 <input type="hidden" name="idDelete" value="">
+                                <form action="filtros/excluir.php" method="post">
+                                 <input type="hidden" name="id" value="<?=$produto->id?>">
                                  <button type="submit" class="btn btn-icon btn-danger"><i class="fas fa-trash-alt"></i></button>
                                  </form>
                             </td>

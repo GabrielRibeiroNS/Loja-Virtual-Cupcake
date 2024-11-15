@@ -1,23 +1,5 @@
 <?php
-/**************************************************************************
- * ************************************************************************
- * GERENTE DE CONEXAO - PROGRAMADOR MAYKON SILVEIRA - MAYKONSILVEIRA.COM.BR
- * 
- * ********************************************************************
- * ********************************************************************
-* MAYKONSILVEIRA.COM.BR DEREICIONANDO VOCÊ PARA O CAMINHO DO SUCESSO #*
- * *************MAYKON***SILVEIRA**************************************
- * *************WEBTEC**TECHNOLOGIES***********************************
- * ********************************************************************
- * TUDO AQUI FOI CRIADO NO MÊS DE NOVEMBRO DE 2020 POR MAYKON SILVEIRA
- * TODOS OS DIREITOS RESERVADOS E CÓDIGO FONTE RASTREADO COM ARQUIVOS 
- * CRIADO POR MAYKONSILVEIRA.COM.BR DESDE 2007 *********
- * TODA SABEDORIA PARA CRIAR ESTES SISTEMAS VEM DO SANTO E ETERNOR PAI
- * O SANTO SENHOR DEUS DE ABRAÃO, ISSAC E JACÓ E DO MEU ÚNICO SENHOR 
- * O MESSIAS NOSSO SALVADOR, POIS A GLROIA É DO PAI E DO FILHO PARA SEMPRE
- * ***********************************************************************
- * ***********************************************************************
- */
+
 class Conexao{
 
     private static $sheepHost = SHEEP_HOST;
