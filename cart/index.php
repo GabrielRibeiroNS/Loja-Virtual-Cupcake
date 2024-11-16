@@ -26,7 +26,7 @@ require('./sheep_core/config.php');
     <div class="header">
         <p class="logo">Loja Cupcake</p>
         <div class="col-md-12">
-            <button style="margin-left:350%; background-color: #fff; height :40px; width :100px; color:#6c01aa; border-radius:7px;" type="submit" name="criarProduto"><a href="../cart/painel/painel.php">Painel</a></button>
+            <button style="margin-left:350%; background-color: #fff; height :40px; width :100px; color:#6c01aa; border-radius:7px;" type="submit" name="criarProduto"><a href="../cart/painel/index.php">Painel</a></button>
         </div>
         <div class="cart"><i class="fa fa-shopping-cart"></i>
             <p><?= $cart->getContaLinhas() > 0 ? $cart->getContaLinhas() : 0 ?></p>

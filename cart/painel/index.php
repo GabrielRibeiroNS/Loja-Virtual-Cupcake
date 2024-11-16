@@ -41,9 +41,11 @@ require('../sheep_core/config.php');
                       <li class="nav-item">
                         <a style="background-color: #6c01aa;"class="nav-link active" href="<?=HOME?>/index.php" target="_blank">VOLTAR PARA A LOJA</a>
                       </li>
+                      <!--
                       <li class="nav-item">
-                        <a style="color: #6c01aa;" class="nav-link" href="painel.php">Atualizar</a>
+                        <a style="color: #6c01aa;" class="nav-link" href="index.php">Atualizar</a>
                       </li>
+                      -->
                      
                       
                      

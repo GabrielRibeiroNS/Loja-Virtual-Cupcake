@@ -13,9 +13,9 @@ if(isset($del)){
     $excluir->Remover('produtos', "WHERE id = {$del}");
     
     if($excluir->getResultado()){
-        header("Location: ".HOME."/index.php?sucesso=true");
+        header("Location: ".HOME."/painel/index.php?sucesso=true");
     }else{
-        header("Location: ".HOME."/index.php?erro=true");
+        header("Location: ".HOME."/painel/index.php?erro=true");
     }
 }
 

@@ -69,7 +69,7 @@ require('../sheep_core/config.php');
                   <div class="form-group row mb-4">
                    
                     <div class="col-md-12">
-                        <button style="background-color: #6c01aa; height :50px; width :300px; color:#fff; border-radius:7px;" type="submit" name="criarProduto" >Salvar</button>
+                        <button style="background-color: #6c01aa; height :50px; width :300px; color:#fff; border-radius:7px;" type="submit" name="criarProduto">Salvar</button>
                     </div>
 
                   </div>

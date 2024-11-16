@@ -13,7 +13,7 @@ if(isset($carrinho['addcarrinho'])){
     if($salvar->getResultado($data)){
         header("location: ".HOME."/index.php?sucesso=true");    
     }else{
-        header("location: ".HOME."/index.php?erro=true"); 
+        header("location: ".HOME."/index.php?asdasd=true"); 
     }
 
     //var_dump($carrinho); MOSTRA RECEBENDO OS ARQUIVOS E SUAS ESPECIFICAÇÔES
