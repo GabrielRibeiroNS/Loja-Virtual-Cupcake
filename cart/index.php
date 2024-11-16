@@ -25,7 +25,9 @@ require('./sheep_core/config.php');
     <!--- Topo do Site --->
     <div class="header">
         <p class="logo">Loja Cupcake</p>
-        <!--- Logo Carrinho de Compras Font Awesome --->
+        <div class="col-md-12">
+            <button style="margin-left:350%; background-color: #fff; height :40px; width :100px; color:#6c01aa; border-radius:7px;" type="submit" name="criarProduto"><a href="../cart/painel/painel.php">Painel</a></button>
+        </div>
         <div class="cart"><i class="fa fa-shopping-cart"></i>
             <p><?= $cart->getContaLinhas() > 0 ? $cart->getContaLinhas() : 0 ?></p>
         </div>
@@ -102,14 +104,15 @@ require('./sheep_core/config.php');
                             <!-- INICIO PRODUTO CARRINHO -->
                             <div class="item-carrinho">
                                 <div class="linha-da-imagem">
-                                    <img src="<?= HOME ?>/uploads/<?= $produto->capa?>" alt="<?= $produto->nome?>" class="img-carrinho">
+                                    <img src="<?= HOME ?>/uploads/<?= $produto->capa ?>" alt="<?= $produto->nome ?>" class="img-carrinho">
                                 </div>
-                                <p><?= $produto->nome?></p>
-                                <h2>R$ <?= $produto->valor?></h2>
+                                <p><?= $produto->nome ?></p>
+                                <h2>R$ <?= $produto->valor ?></h2>
                                 <form action="filtros/excluir.php" method="post">
-                                    <input type="hidden" name="id_produto" value="<?=$produto->id?>">
+                                    <input type="hidden" name="id_produto" value="<?= $produto->id ?>">
                                     <button type="submit" style="border:none; background:none; "> <i class="fa fa-trash-o"></i> </button>
                                 </form>
+
                             </div>
                             <!-- FIM PRODUTO CARRINHO -->
 
@@ -129,16 +132,16 @@ require('./sheep_core/config.php');
             <?php
             $totalCarrinho = new Ler();
             $totalCarrinho->LeituraCompleta("SELECT SUM(valor) as total FROM carrinho");
-            if($totalCarrinho->getResultado()){
-                $totalCompras = number_format($totalCarrinho->getResultado()[0]['total'], 2,',','.');
-            }else{
+            if ($totalCarrinho->getResultado()) {
+                $totalCompras = number_format($totalCarrinho->getResultado()[0]['total'], 2, ',', '.');
+            } else {
                 $totalCompras = 0;
             }
             ?>
 
             <div class="rodape">
                 <h3>Total</h3>
-                <h2>R$ <?=$totalCompras?></h2>
+                <h2>R$ <?= $totalCompras ?></h2>
             </div>
             <!-- FIM RODAPE -->
 

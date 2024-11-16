@@ -32,17 +32,17 @@ require('../sheep_core/config.php');
                   <div class="card-body">
                       <ul class="nav nav-pills" style="margin:5px; float:right;">
                       <li class="nav-item" >
-                        <a class="nav-link active"  href="addProduto.php">Novo </a>
+                        <a style="background-color: #6c01aa;" class="nav-link active"  href="addProduto.php">Novo </a>
                       </li>
                      
                     </ul>
                     <ul class="nav nav-pills">
                     
                       <li class="nav-item">
-                        <a class="nav-link active" href="<?=HOME?>/index.php" target="_blank">VOLTAR PARA A LOJA</a>
+                        <a style="background-color: #6c01aa;"class="nav-link active" href="<?=HOME?>/index.php" target="_blank">VOLTAR PARA A LOJA</a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link" href="index.php">Listar</a>
+                        <a style="color: #6c01aa;" class="nav-link" href="painel.php">Atualizar</a>
                       </li>
                      
                       
@@ -87,8 +87,6 @@ require('../sheep_core/config.php');
                               if($ler->getResultado()){
                                 foreach($ler->getResultado() as $produto){
                                   $produto = (object) $produto;
-                                
-                                
                             ?>
                           
                           <tr>
@@ -99,14 +97,15 @@ require('../sheep_core/config.php');
                             <td>R$ <?=$produto->valor?></td>
                                                    
                             <td>
-                                <form action="filtros/excluir.php" method="post">
-                                 <input type="hidden" name="id" value="<?=$produto->id?>">
-                                 <button type="submit" class="btn btn-icon btn-danger"><i class="fas fa-trash-alt"></i></button>
+                                <form action="excluir_produto.php" method="post">
+                                 <input type="hidden" name="id_unico" value="<?=$produto->id?>">
+                                 <button type="submit" class="btn btn-icon btn-danger"><i class="fa fa-trash-alt"></i></button>
                                  </form>
                             </td>
                           </tr>
                          <?php
                             }
+                                echo implode($_POST);
                           }
                          ?>
 

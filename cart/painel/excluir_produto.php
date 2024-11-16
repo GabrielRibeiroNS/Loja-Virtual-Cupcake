@@ -1,20 +1,22 @@
 <?php
-
 ob_start();
 require('../sheep_core/config.php');
 
-$del1 = filter_input(INPUT_POST, 'id', FILTER_VALIDATE_INT);
+echo implode($_POST);
 
-if(isset($del1)){
+
+$del = filter_input(INPUT_POST, 'id_unico', FILTER_VALIDATE_INT);
+
+if(isset($del)){
 
     $excluir = new Excluir();
-    $excluir->Remover('produtos', "WHERE id = :id", "id={$del1}");
+    $excluir->Remover('produtos', "WHERE id = {$del}");
+    
     if($excluir->getResultado()){
         header("Location: ".HOME."/index.php?sucesso=true");
     }else{
         header("Location: ".HOME."/index.php?erro=true");
-    } 
+    }
 }
-
 
 ?>
