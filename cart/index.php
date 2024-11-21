@@ -10,7 +10,7 @@ require('./sheep_core/config.php');
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LOJA CUPCAKE</title>
-    <link rel="stylesheet" href="../cart/style.css">
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
@@ -25,8 +25,8 @@ require('./sheep_core/config.php');
     <!--- Topo do Site --->
     <div class="header">
         <p class="logo">Loja Cupcake</p>
-        <div class="col-md-12">
-            <button style="margin-left:350%; background-color: #fff; height :40px; width :100px; color:#6c01aa; border-radius:7px;" type="submit" name="criarProduto"><a href="../cart/painel/index.php">Painel</a></button>
+        <div class="painel_button">
+            <button type="submit" name="criarProduto"><a href="../cart/painel/index.php">Painel</a></button>
         </div>
         <div class="cart"><i class="fa fa-shopping-cart"></i>
             <p><?= $cart->getContaLinhas() > 0 ? $cart->getContaLinhas() : 0 ?></p>

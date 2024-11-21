@@ -10,9 +10,9 @@ require('../sheep_core/config.php');
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
         <title>PAINEL DE PRODUTOS</title>
-        <link rel="stylesheet" href="assets/css/app.min.css">
+        <link rel="stylesheet" href="../assets/css/app.min.css">
       
-        <link rel="stylesheet" href="assets/css/style.css">
+        <link rel="stylesheet" href="../assets/css/style.css">
         <!-- FIM DO CSS  SHEEP FRAMEWORK PHP - -->
 </head>
 <body>
