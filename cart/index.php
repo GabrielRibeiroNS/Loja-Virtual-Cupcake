@@ -32,7 +32,7 @@ require('./sheep_core/config.php');
             <p><?= $cart->getContaLinhas() > 0 ? $cart->getContaLinhas() : 0 ?></p>
         </div>
     </div>
-    <!--- Fim do Topo Site --->
+    <!---Fim do Topo Site--->
 
 
 
