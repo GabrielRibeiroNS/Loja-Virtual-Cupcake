@@ -153,4 +153,6 @@ require('./sheep_core/config.php');
 <!-- Xampp -->
 <!-- https://localhost/Loja-Virtual-Cupcake/cart/ -->
 
+        <!--Working on CS50 course-->
+
 </html>
