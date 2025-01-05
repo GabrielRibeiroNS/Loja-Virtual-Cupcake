@@ -154,7 +154,7 @@ require('./sheep_core/config.php');
 <!-- https://localhost/Loja-Virtual-Cupcake/cart/ -->
 
         <!--Working on CS50 course-->
-                <!--Second Day on CS50 course asd-->
+                <!--Second Day on CS50 course asd2-->
 
 
 </html>
