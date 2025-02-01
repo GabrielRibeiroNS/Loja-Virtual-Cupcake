@@ -155,7 +155,7 @@ require('./sheep_core/config.php');
 
         <!--Working on CS50 course!!-->
                 <!--Second Day on CS50 course Horwship Christ-->
-                <!--Today i've learned Scratch from CS50 -->
+                <!--Today i've learned Scratch from CS50 arrays -->
         <!--Week 1 C language Conditionals - loops - while - for - when --- complete prgramimg !!arrays!! i didn't study today !! arrays of strings-->
 
 
